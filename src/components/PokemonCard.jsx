@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 
 function PokemonCard({ pokemon }) {
-  console.log(pokemon);
-
+  
   return (
     <figure>
       {pokemon.imgSrc ? (
@@ -11,7 +10,7 @@ function PokemonCard({ pokemon }) {
         <p>???</p>
       )}
 
-      <figcaption>{pokemon.name}</figcaption>
+      <figcaption><strong>{pokemon.name}</strong></figcaption>
     </figure>
   );
 }
