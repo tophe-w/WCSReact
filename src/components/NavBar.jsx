@@ -1,4 +1,6 @@
-function NavBar({setPokemonIndex, pokemonIndex, pokemonList}) {
+
+import PropTypes from "prop-types";
+function NavBar({ setPokemonIndex, pokemonIndex, pokemonList }) {
     const handleClickPrecedent = () => {
       setPokemonIndex(pokemonIndex - 1);
     };
@@ -17,4 +19,17 @@ function NavBar({setPokemonIndex, pokemonIndex, pokemonList}) {
       </div>
     );
 }
+NavBar.propTypes = {
+  pokemonIndex: PropTypes.number.isRequired,
+
+  setPokemonIndex: PropTypes.func.isRequired,
+
+  pokemonList: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+
+      imgSrc: PropTypes.string,
+    })
+  ).isRequired,
+};
 export default NavBar;
