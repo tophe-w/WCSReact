@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-  
+
   const selectedPokemon = pokemonList[pokemonIndex];
   return (
     <div>
@@ -19,8 +19,6 @@ function App() {
     </div>
   );
 }
-
-
 
 const pokemonList = [
   {
@@ -46,6 +44,7 @@ const pokemonList = [
   {
     name: "mew",
   },
+  
 ];
 
 export default App;
